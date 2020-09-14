@@ -167,6 +167,14 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "=", function()
   win:setFrame(f, 0)
 end)
 
+-- Centre
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "'", function()
+  local win = hs.window.focusedWindow()
+  local screen = win:screen()
+
+  win:centerOnScreen(screen, true, 0)
+end)
+
 -- Splitters (vertical-top)
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "P", function()
   local win = hs.window.focusedWindow()
